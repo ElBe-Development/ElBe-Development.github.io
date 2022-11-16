@@ -4,9 +4,106 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello?</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">  
+    <title>Home - ElBe Development</title>
+    <script>
+        //Credit to some of the code by codepen.io
+        $(function(){
+            $(window).scroll(function(){
+              var winTop = $(window).scrollTop();
+              if(winTop >= 30){
+                $("body").addClass("sticky-header");
+              }else{
+                $("body").removeClass("sticky-header");
+              }
+            });
+          });
+    </script>
+    <style>
+        /*Credit to some of the code by codepen.io*/
+        html {
+            scroll-behavior: smooth;
+            scroll-behavior: auto;
+        }        
+
+        body {
+            background-color: black;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            height: 100%;
+            perspective: 1px;
+            transform-style: preserve-3d;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .header_text {
+            font-size: 120px;
+            font-weight: bolder;
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+            margin-left: 10px;
+        }
+
+        .text {
+            font-size: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+            margin-left: 10px;
+        }
+
+        .typed-out{
+          overflow: hidden;
+          border-right: .15em solid white;
+          white-space: nowrap;
+          width: 0;
+          animation: 
+            typing 1s steps(16, end) forwards,
+            blink 0.8s infinite;
+        }
+        
+        .container {
+            display: inline-block;
+        }
+
+        .image-container{
+            background-image: url("images/Code.png");
+            background-color: black;
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-bottom: 10px;
+            filter: brightness(70%);
+        }
+        .image-container:hover {
+            zoom: 110%;
+            filter: brightness(120%);
+        }
+          
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink {
+            from {border-color: transparent}
+            to {border-color: white}
+        }
+    </style>
 </head>
-<body>
-    <h1>Hello!</h1>
+    <div class="image-container">
+        <div class="container">
+            <div class="header_text typed-out">ElBe Development</div>
+        </div>
+        <div class="text" id="about">ElBe Development is a Development Organization founded by <a href="https://github.com/ElBe-Plaq">ElBe</a> in 2022. It includes ElBe Development, ElBlang Development and Alpha MC Development.<br><br></div>
+        <div class="text"><span style="font-weight: bolder;">Projects:<br></span>- <a href="http://skyflamme.de">Plaq Games</a><br>- <a href="https://github.com/ElBe-Development/discord.py-bot-template">Discord.py bot template</a><br>- Simply Bot<br>- ElBlang<br>- Alpha MC<br>- 3arthh4ck+<br>... and more<br><br></div>
+        <div class="text"><span style="font-weight: bolder;">Support:<br></span>- <a href="https://dsc.gg/elbe-development">Discord Support Server</a><br>- <a href="mailto:email.elbedevelopment@gmail.com">E-Mail</a></div>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+    <div class="text" style="text-align: center;">© by <a href="https://github.com/ElBe-Plaq">ElBe</a> 2022</div>
 </body>
 </html>
